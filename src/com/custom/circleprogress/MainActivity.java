@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         mCircleProgressBarStroke = (CircleProgressBar) findViewById(R.id.id_circle_progress_bar_stroke);
         mCircleProgressBarFill = (CircleProgressBar) findViewById(R.id.id_circle_progress_bar_fill);
-        mLoopHandler.postDelayed(new PerformLoadProgress(), 600);
+        mLoopHandler.postDelayed(new PerformLoadProgress(), 60);
         mPerformLoadProgress = new PerformLoadProgress();
         Toast.makeText(this, "正准备加载...", Toast.LENGTH_SHORT).show();
 
@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
             mProgress += DEFAULT_LOAD_GAP;
             mCircleProgressBarStroke.setProgress(mProgress);
             mCircleProgressBarFill.setProgress(mProgress);
-            mLoopHandler.postDelayed(this, 2000);
+            mLoopHandler.postDelayed(this, 200);
         }
     }
 }
